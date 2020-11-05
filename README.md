@@ -29,7 +29,7 @@ A books is attributed :
 - An authorId
 
 You can 
-```json
+```js
 query {
 	books {
 		name,
@@ -40,7 +40,7 @@ query {
 ```
 
 or for  a specific book
-```json
+```js
 query {
 	book(id: 1) {
 		name,
@@ -55,7 +55,7 @@ An author has :
 - An id
 - By graph, is linked to books created
 Therefore you can 
-```json
+```js
 query {
 	authors {
 		books {
@@ -68,7 +68,7 @@ query {
 
 Or for a specific author
 
-```json
+```js
 query {
 	author(id: 1) {
 		name,
@@ -82,7 +82,7 @@ query {
 
 For mutations (create operations) : You can create an author or a book
 
-```json
+```js
 mutation {
 	addBook(name: String, authorId: Int) {
 		name,
@@ -91,7 +91,7 @@ mutation {
 }
 ```
 
-```json
+```js
 mutation {
 	addAuthor(name: String) {
 		name,
